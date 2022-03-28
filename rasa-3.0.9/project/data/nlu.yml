@@ -1,0 +1,146 @@
+version: "3.0"
+
+nlu:
+  - intent: greet
+    examples: |
+      - hey
+      - hello
+      - hi
+      - hello there
+      - good morning
+      - good evening
+      - moin
+      - hey there
+      - let's go
+      - hey dude
+      - goodmorning
+      - goodevening
+      - good afternoon
+
+  - intent: affirm
+    examples: |
+      - yes
+      - y
+      - indeed
+      - of course
+      - that sounds good
+      - correct
+
+  - intent: deny
+    examples: |
+      - no
+      - n
+      - never
+      - I don't think so
+      - no way
+      - not really
+
+  - intent: thanks
+    examples: |
+      - thank you
+      - thanks so much
+      - I appreciate it. Thanks
+
+  - intent: goodbye
+    examples: |
+      - cu
+      - good by
+      - cee you later
+      - good night
+      - bye
+      - goodbye
+      - have a nice day
+      - see you around
+      - bye bye
+      - see you later
+
+  - intent: out_of_scope
+    examples: |
+      - that's not what I want to do
+      - wait stop
+      - you're no help
+      - this is no help at all
+      - how old are you
+      - I want to order a pizza
+      - tell me the weather
+      - this isn't working
+      - I already told you that
+      - don't like that
+      - I don't want to tell you that
+      - none of your business
+      - that's not right
+      - stop asking
+      - nevermind
+      - I want to do something else
+      - I changed my mind
+
+  - intent: ask_for_situation_info
+    examples: |
+      - How many covid cases are there today?
+      - I want to know more about the covid situation?
+
+  - intent: ask_for_help
+    examples: |
+      - How can I ask for help if I have covid?
+      - I have covid. What should I do?
+
+  - intent: ask_for_covid_symptoms
+    examples: |
+      - What are the common symptoms of COVID-19?
+      - How do I know if I have COVID?
+
+  - intent: bot_challenge
+    examples: |
+      - are you a bot?
+      - are you a human?
+      - am I talking to a bot?
+      - am I talking to a human?
+
+  - intent: request_clinic
+    examples: |
+      - Where is the closet clinic near me?
+      - Where can I find a clinic that accommodates patients with mild COVID symptoms?
+
+  - intent: request_hospital
+    examples: |
+      - I want to go to a hospital?
+      - What is the closet hospital near me?
+
+  - intent: request_leave
+    examples: |
+      - Can I leave my place if I have been tested positive for COVID?
+
+  - intent: ask_hygiene_advice
+    examples: |
+      - How can I take care of the hygiene in my place?
+
+  - intent: go_to_clinic
+    examples: |
+      - I need to go to a clinic
+      - How should I go to a clinic if I have COVID?
+
+  - intent: ask_dispose_garbage
+    examples: |
+      - What should I do with my garbages?
+      - Should I dump the garbages?
+
+  - intent: ask_health_advice
+    examples: |
+      - How should I maintain a healthy lifestyle?
+      - I want to recover sooner. What should I do?
+
+  - intent: ask_daily_necessities
+    examples: |
+      - How do I take care of my daily need?
+      - How can I order food?
+
+  - intent: ask_quarantine_advice
+    examples: |
+      - Is there anything I need to do during my quarantine?
+      - Do you have any quarantine advice for me?
+
+  - intent: inform
+    examples: |
+      - [Hong Kong](area)
+      - [Kowloon](area)
+      - [New Territories](area)

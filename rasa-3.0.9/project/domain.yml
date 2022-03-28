@@ -1,0 +1,111 @@
+version: "3.0"
+
+intents:
+  - greet
+  - goodbye
+  - thanks
+  - affirm
+  - deny
+  - inform
+  - out_of_scope
+  - go_to_clinic
+  - request_leave
+  - request_hospital
+  - request_clinic
+  - ask_health_advice
+  - ask_hygiene_advice
+  - ask_daily_necessities
+  - ask_dispose_garbage
+  - ask_quarantine_advice
+  - ask_for_situation_info
+  - ask_for_help
+  - ask_for_covid_symptoms
+  - bot_challenge
+
+responses:
+  utter_greet:
+    - text: "Hi! How can I help?"
+
+  utter_no_problem:
+    - text: "No problem. I'm glad to be of help!"
+
+  utter_goodbye:
+    - text: "Bye"
+
+  utter_break_form:
+    - text: "No problem. Let me know if you still need help."
+
+  utter_offer_contact_info:
+    - text: "Sure. You can seek help from the contacts below\n- Centre for Health Protection Hotline: 2125 1111/2125 1122 (9am to 8pm)\n- Home Affairs Department Hotline: 2835 1473 (9am to 6pm, Mon to Fri except public holidays)\n- Compulsory Testing Hotline: 6275 6901 (9am to 6pm)\n- HKSAR Government COVID-19 WhatsApp Helpline: 9617 1823"
+
+  utter_offer_symptoms:
+    - text: "Sure. Below are the common COVID symptoms:\n- Fever or chills\n- Cough (with or without sputum)\n- Shortness of breath or difficulty breathing\n- Fatigue\n- Muscle or body aches\n- Headache\n- New loss of taste or smell\n- Sore throat\n- Congestion or runny nose\n- Nausea or vomiting\n- Diarrhea\nNote: We also strongly advice you to conduct RAT immediately if you have the above-mentioned symptoms"
+
+  utter_iamabot:
+    - text: "I am a bot, powered by Rasa."
+
+  utter_offer_hospital_info:
+    - text: "Sure. Queen Elizabeth Hospital in Kowloon Central Cluster has been converted to designated hospital for COVID-19 patients since 9th March 2022.\n============================================================\nHospital name: Queen Elizabeth Hospital\nAddress: 30 Gascoigne Rd, Yau Ma Tei\nTel: 35068888\nNote: You should go to the hospital only if you are suffering from severe symptoms.\nSevere symptoms may include:\n- Shortness of breath\n- Palpitation\n- Chest pain\nHowever, if you are feeling unwell and you do not have any severe symptoms, we advice you to book an appointment at a designated clinic to seek help from a doctor."
+
+  utter_ask_clinic_form_area:
+    - text: "Sure. Would you mind telling me which area do you live in? (Please type Hong Kong, Kowloon or New Territories)"
+
+  utter_offer_find_clinic:
+    - text: "Would you like me to help you find the designated clinics in your area?"
+
+  utter_ask_continue:
+    - text: "Do you need anything else?"
+
+  utter_offer_taxi_info:
+    - text: "Sure. You may call a designated taxi to go to a clinic, which is totally free of charge.\nYou should call 36934770 or visit https://designatedtaxihk.com/ to book a a designated taxi\nYou may also walk to a designated clinic; we advice you to avoid walking in public area and using public transportation while you are on your way to a designated clinic\nHowever, you must book an appointment in a designated clinic before you can visit a doctor at the health facility."
+
+  utter_ask_continue_form:
+    - text: "Sorry. I didn't catch what you said. Would you mind telling me again?"
+
+  utter_no_leaving:
+    - text: "If you have an isolation order in effect, you are not allowed to leave the place of quarantine during the whole quarantine period.\nHowever, if you have receieved at least two doses of COVID-19 vaccines, you may conduct RAT starting from the 6th day of your isolation period, if you have negative RAT test results on two sucessive days, you may end your isolation early since you have recovered from COVID-19 and your isolation order will be no longer in effect."
+
+  utter_offer_quarantine_advice:
+    - text: "You are required to undergo RAT on Day 1, Day 3, Day 7 and Day 14; and keep record of the RAT results and their photos.\nIf Day 1, Day 3, Day 7 and Day 14 has already passed on the day on which the quarantine order issued to you, you need not undergo testing on such testing date which has already passed.\nAlso, close contacts who are children less than three years old are required to undergo RAT on Day 1 and Day 7."
+
+  utter_offer_hygiene_advice:
+    - text: "Sure. Below are the advice of how to take care of the hygiene at your place.\n- Clean and disinfect the home environment daily with 1 in 49 diluted household bleach (mixing 10 ml of bleach containing 5.25% sodium hypochlorite with 490 ml of water), leave for 15-30 minutes and then rinse with water. For metallic surface, disinfect with 70% alcohol.\n- If places are contaminated by respiratory secretions, vomitus or excreta, use strongly absorbent disposable towels to clean up the visible matter. Then disinfect the surface and the neighbouring area with disinfectant. For non-metallic surface, disinfect with 1 in 4 diluted household bleach (mixture of 10ml of household bleach containing 5.25% sodium hypochlorite with 40ml of water), leave for 10 minutes, and then rinse with water. For metallic surface, disinfect with 70% alcohol.\n- Put the toilet lid down before flushing.\n- Wash hands with soap and water after toileting.\n- Pour about half a litre of water in each floor drain outlet once per week."
+
+  utter_offer_garbage_advice:
+    - text: "Sure. You can leave your home to dispose of garbage in the designated refuse collection point on the same floor, but you should wear a well-fitted surgical mask during the whole process.\nBefore leaving your home, you should properly wrap the garbage, practice hand hygiene and close the door immediately when leaving your home.\nYou should return to your home as soon as possible and practice hand hygiene immediately"
+
+  utter_offer_health_advice:
+    - text: "Sure. For optimal health during home quarantine, you are urged to lead a healthy lifestyle:\n- Observe the basic principles of healthy eating that include limiting fats, salt and sugar intake, eating more fruit and vegetables, consuming more dietary fibre and drinking enough water\n- Stay physically active, such as do home-based exercise and household chores\n- No smoking and refrain from alcohol drinking."
+
+  utter_offer_daily_necessities_advice:
+    - text: "You are required to make your own arrangements for food and basic daily necessities, such as by friends and relatives not under quarantine or ordering online / through telephone (you are advised to use contactless payment methods).\nNevertheless, persons delivering these items should leave the items at your door (e.g. a chair outside your door) and are not allowed to enter your home to reduce the risk of them being exposed to infection. You should also avoid having face-to-face contact with them."
+
+actions:
+  - action_ask_situation
+  - action_find_clinic
+  # - action_ask_buildings
+  - utter_greet
+
+entities:
+  - area
+
+slots:
+  area:
+    type: categorical
+    values:
+      - Hong Kong
+      - Kowloon
+      - New Territories
+    influence_conversation: false
+    mappings:
+      - type: from_entity
+        entity: area
+
+forms:
+  clinic_form:
+    required_slots:
+      - area
+
+session_config:
+  session_expiration_time: 300
+  carry_over_slots_to_new_session: false

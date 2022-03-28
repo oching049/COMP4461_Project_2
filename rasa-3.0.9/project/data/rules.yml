@@ -1,0 +1,72 @@
+version: "3.0"
+
+rules:
+  - rule: Say goodbye anytime the user says goodbye
+    steps:
+      - intent: goodbye
+      - action: utter_goodbye
+
+  - rule: Say no problem when the user says thank you
+    steps:
+      - intent: thanks
+      - action: utter_no_problem
+
+  - rule: Say 'I am a bot' anytime the user challenges
+    steps:
+      - intent: bot_challenge
+      - action: utter_iamabot
+
+  - rule: Give user the hospital info
+    steps:
+      - intent: request_hospital
+      - action: utter_offer_hospital_info
+
+  - rule: Give user the COVID situation info
+    steps:
+      - intent: ask_for_situation_info
+      - action: action_ask_situation
+
+  - rule: Give user the COVID contact info
+    steps:
+      - intent: ask_for_help
+      - action: utter_offer_contact_info
+
+  - rule: Give user the COVID symptoms
+    steps:
+      - intent: ask_for_covid_symptoms
+      - action: utter_offer_symptoms
+
+  - rule: Give user the health advice
+    steps:
+      - intent: ask_health_advice
+      - action: utter_offer_health_advice
+
+  - rule: Give user the daily necessities advice
+    steps:
+      - intent: ask_daily_necessities
+      - action: utter_offer_daily_necessities_advice
+
+  - rule: Give user the hygiene advice
+    steps:
+      - intent: ask_hygiene_advice
+      - action: utter_offer_hygiene_advice
+
+  - rule: Tell user if they can leave their place of isolation
+    steps:
+      - intent: request_leave
+      - action: utter_no_leaving
+
+  - rule: Give user the quarantine advice
+    steps:
+      - intent: ask_quarantine_advice
+      - action: utter_offer_quarantine_advice
+
+  - rule: Tell user how to handle their garbages
+    steps:
+      - intent: ask_dispose_garbage
+      - action: utter_offer_garbage_advice
+
+  # - rule: Give user the COVID building info
+  #   steps:
+  #     - intent: ask_for_buildings
+  #     - action: action_ask_buildings
