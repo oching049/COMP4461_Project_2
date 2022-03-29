@@ -47,14 +47,11 @@ responses:
   utter_offer_hospital_info:
     - text: "Sure. Queen Elizabeth Hospital in Kowloon Central Cluster has been converted to designated hospital for COVID-19 patients since 9th March 2022.\n============================================================\nHospital name: Queen Elizabeth Hospital\nAddress: 30 Gascoigne Rd, Yau Ma Tei\nTel: 35068888\nNote: You should go to the hospital only if you are suffering from severe symptoms.\nSevere symptoms may include:\n- Shortness of breath\n- Palpitation\n- Chest pain\nHowever, if you are feeling unwell and you do not have any severe symptoms, we advice you to book an appointment at a designated clinic to seek help from a doctor."
 
-  utter_ask_clinic_form_area:
-    - text: "Sure. Would you mind telling me which area do you live in? (Please type Hong Kong, Kowloon or New Territories)"
+  utter_ask_address_string:
+    - text: "Sure. Would you mind telling me where do you live?"
 
   utter_offer_find_clinic:
     - text: "Would you like me to help you find the designated clinics in your area?"
-
-  utter_ask_continue:
-    - text: "Do you need anything else?"
 
   utter_offer_taxi_info:
     - text: "Sure. You may call a designated taxi to go to a clinic, which is totally free of charge.\nYou should call 36934770 or visit https://designatedtaxihk.com/ to book a a designated taxi\nYou may also walk to a designated clinic; we advice you to avoid walking in public area and using public transportation while you are on your way to a designated clinic\nHowever, you must book an appointment in a designated clinic before you can visit a doctor at the health facility."
@@ -83,28 +80,27 @@ responses:
 actions:
   - action_ask_situation
   - action_find_clinic
-  # - action_ask_buildings
   - utter_greet
 
 entities:
-  - area
+  - address_string
 
 slots:
-  area:
-    type: categorical
-    values:
-      - Hong Kong
-      - Kowloon
-      - New Territories
-    influence_conversation: false
+  address_string:
+    type: text
     mappings:
-      - type: from_entity
-        entity: area
+      - type: from_text
+        not-intent:
+          - out_of_scope
+          - deny
+        conditions:
+          - active_loop: clinic_form
+            requested_slot: address_string
 
 forms:
   clinic_form:
     required_slots:
-      - area
+      - address_string
 
 session_config:
   session_expiration_time: 300

@@ -66,6 +66,11 @@ rules:
       - intent: ask_dispose_garbage
       - action: utter_offer_garbage_advice
 
+  - rule: Tell user how to go to a clinic
+    steps:
+      - intent: go_to_clinic
+      - action: utter_offer_taxi_info
+
   # - rule: Give user the COVID building info
   #   steps:
   #     - intent: ask_for_buildings

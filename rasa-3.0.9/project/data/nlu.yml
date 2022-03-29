@@ -141,6 +141,4 @@ nlu:
 
   - intent: inform
     examples: |
-      - [Hong Kong](area)
-      - [Kowloon](area)
-      - [New Territories](area)
+      - Tai Hang

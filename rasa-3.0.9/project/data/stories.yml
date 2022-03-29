@@ -18,13 +18,9 @@ stories:
       - action: clinic_form
       - active_loop: clinic_form
       - slot_was_set:
-          - requested_slot: area
-      - slot_was_set:
           - requested_slot: null
       - active_loop: null
       - action: action_find_clinic
-      - slot_was_set:
-          - area: null
 
   - story: Break clinic form
     steps:
@@ -59,17 +55,17 @@ stories:
     steps:
       - intent: go_to_clinic
       - action: utter_offer_taxi_info
-      - action: utter_offer_find_clinic
-      - intent: affirm
-      - action: clinic_form
-      - active_loop: clinic_form
+      # - action: utter_offer_find_clinic
+      # - intent: affirm
+      #- action: clinic_form
+      #- active_loop: clinic_form
 
-  - story: COVID Taxi unhappy
-    steps:
-      - intent: go_to_clinic
-      - action: utter_offer_taxi_info
-      - action: utter_offer_find_clinic
-      - or:
-          - intent: deny
-          - intent: out_of_scope
-      - action: utter_break_form
+  # - story: COVID Taxi unhappy
+  #   steps:
+  #     - intent: go_to_clinic
+  #     - action: utter_offer_taxi_info
+  #     - action: utter_offer_find_clinic
+  #     - or:
+  #         - intent: deny
+  #         - intent: out_of_scope
+  #     - action: utter_break_form
