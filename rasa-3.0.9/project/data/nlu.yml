@@ -109,25 +109,31 @@ nlu:
   - intent: request_leave
     examples: |
       - Can I leave my place if I have been tested positive for COVID?
+      - Can I leave?
+      - I don't want to stay in my room forever...
 
   - intent: ask_hygiene_advice
     examples: |
       - How can I take care of the hygiene in my place?
+      - How can I make sure my place is sterilized?
 
   - intent: go_to_clinic
     examples: |
       - I need to go to a clinic
       - How should I go to a clinic if I have COVID?
+      
 
   - intent: ask_dispose_garbage
     examples: |
       - What should I do with my garbages?
       - Should I dump the garbages?
+      - Am I allowed to throw garbages?
 
   - intent: ask_health_advice
     examples: |
       - How should I maintain a healthy lifestyle?
       - I want to recover sooner. What should I do?
+      - How to get better?
 
   - intent: ask_daily_necessities
     examples: |
@@ -138,6 +144,7 @@ nlu:
     examples: |
       - Is there anything I need to do during my quarantine?
       - Do you have any quarantine advice for me?
+      - How can I get through quarantine?
 
   - intent: inform
     examples: |
