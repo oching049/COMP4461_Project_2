@@ -356,8 +356,6 @@ class ActionFindClinic(Action):
                 text=f"We have found a designated near {address_string}, which is just about {duration} of walking.")
 
             dispatcher.utter_message(text="Your nearest clinic is:")
-            dispatcher.utter_message(
-                text="============================================================")
 
             name = filtered_clinic["name"]
             address = filtered_clinic["address"]

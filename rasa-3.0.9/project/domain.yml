@@ -45,7 +45,7 @@ responses:
     - text: "I am a bot, powered by Rasa."
 
   utter_offer_hospital_info:
-    - text: "Sure. Queen Elizabeth Hospital in Kowloon Central Cluster has been converted to designated hospital for COVID-19 patients since 9th March 2022.\n============================================================\nHospital name: Queen Elizabeth Hospital\nAddress: 30 Gascoigne Rd, Yau Ma Tei\nTel: 35068888\nNote: You should go to the hospital only if you are suffering from severe symptoms.\nSevere symptoms may include:\n- Shortness of breath\n- Palpitation\n- Chest pain\nHowever, if you are feeling unwell and you do not have any severe symptoms, we advice you to book an appointment at a designated clinic to seek help from a doctor."
+    - text: "Sure. Queen Elizabeth Hospital in Kowloon Central Cluster has been converted to designated hospital for COVID-19 patients since 9th March 2022.\nHospital name: Queen Elizabeth Hospital\nAddress: 30 Gascoigne Rd, Yau Ma Tei\nTel: 35068888\nNote: You should go to the hospital only if you are suffering from severe symptoms.\nSevere symptoms may include:\n- Shortness of breath\n- Palpitation\n- Chest pain\nHowever, if you are feeling unwell and you do not have any severe symptoms, we advice you to book an appointment at a designated clinic to seek help from a doctor."
 
   utter_ask_address_string:
     - text: "Sure. Would you mind telling me where do you live?"
