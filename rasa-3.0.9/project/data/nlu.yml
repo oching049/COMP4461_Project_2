@@ -83,11 +83,14 @@ nlu:
     examples: |
       - How can I ask for help if I have covid?
       - I have covid. What should I do?
+      - Help me
 
   - intent: ask_for_covid_symptoms
     examples: |
       - What are the common symptoms of COVID-19?
       - How do I know if I have COVID?
+      - I don't feel well
+      - How to tell I got covid?
 
   - intent: bot_challenge
     examples: |
@@ -149,3 +152,7 @@ nlu:
   - intent: inform
     examples: |
       - Tai Hang
+
+  - intent: dumb_questions
+    examples: |
+      - Why covid

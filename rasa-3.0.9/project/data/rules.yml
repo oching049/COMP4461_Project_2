@@ -71,6 +71,11 @@ rules:
       - intent: go_to_clinic
       - action: utter_offer_taxi_info
 
+  #- rule: Answer a dumb question
+  #  steps:
+  #    - intent: dumb_questions
+  #    - action:
+
   # - rule: Give user the COVID building info
   #   steps:
   #     - intent: ask_for_buildings
