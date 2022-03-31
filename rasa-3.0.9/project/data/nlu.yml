@@ -40,6 +40,7 @@ nlu:
       - thank you
       - thanks so much
       - I appreciate it. Thanks
+      - that's all I want to know, thanks.
 
   - intent: goodbye
     examples: |
