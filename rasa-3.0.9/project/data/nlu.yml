@@ -101,13 +101,14 @@ nlu:
 
   - intent: request_clinic
     examples: |
-      - Where is the closet clinic near me?
+      - Where is the closest clinic near me?
       - Where can I find a clinic that accommodates patients with mild COVID symptoms?
 
   - intent: request_hospital
     examples: |
       - I want to go to a hospital?
       - What is the closet hospital near me?
+      - I want to go to a hospital instead
 
   - intent: request_leave
     examples: |
@@ -118,7 +119,7 @@ nlu:
   - intent: ask_hygiene_advice
     examples: |
       - How can I take care of the hygiene in my place?
-      - How can I make sure my place is sterilized?
+      - How can I make sure my place is safe?
 
   - intent: go_to_clinic
     examples: |
@@ -147,7 +148,7 @@ nlu:
     examples: |
       - Is there anything I need to do during my quarantine?
       - Do you have any quarantine advice for me?
-      - How can I get through quarantine?
+      - Tell me how can I get through quarantine
 
   - intent: inform
     examples: |
